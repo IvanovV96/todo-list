@@ -1,16 +1,21 @@
+import { Provider } from 'react-redux/es/exports';
+import { AppBar } from './AppBar/AppBar';
+import { Layout } from './Layout/Layout';
+import { TaskForm } from './TaskForm/TaskForm';
+import { TaskList } from './TaskList/TaskList';
+import { store, persistor } from 'redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Layout>
+          <AppBar />
+          <TaskForm />
+          <TaskList />
+        </Layout>
+      </PersistGate>
+    </Provider>
   );
 };
