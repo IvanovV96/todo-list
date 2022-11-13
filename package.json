@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "todo-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://IvanovV96.github.io/todo-list/",
+  "homepage": "https://ivanovV96.github.io/todo-list",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.3",
